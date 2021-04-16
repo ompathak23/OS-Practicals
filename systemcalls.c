@@ -29,12 +29,14 @@ int main()
         else if (WIFEXITED(status) && WEXITSTATUS(status)){
             if (WEXITSTATUS(status) == 127) printf("execv failed\n");
             else printf("program terminated normally,"" but returned a non-zero status\n");
+        }
     else printf("program didn't terminate normally\n");
+    }
     else printf("waitpid() failed\n");
 
     exit(0);
 
     }
-    
+
     return 0;
 }
